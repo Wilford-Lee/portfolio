@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
+  <!-- Put your site title here -->
   <title>
-    Wilfrod Lee Wen Rey portfolio
+    Syed Ali Hussnain | A Web Developer based in Lahore, Pakistan.
   </title>
 
-  <meta name="description" content="">  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
+  <!-- ***** Header ***** -->
 
   <header class="header" role="banner" id="top">
     <div class="row">
@@ -24,23 +27,23 @@
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
-
-    
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-
-          <span>Wilfrod Lee Wen Rey | Mechanical Engineering Student at NTU</span>
+          <!-- Replace the following name with your name -->
+          <span>Syed Ali Hussnain</span>
         </h1>
-
-        <p>Good day! Currently I am serving my National Service at the Ministry of Home Affairs (MHA). 
-    Afterwards, I will pursing a degree in Mechanical Engineering at NTU in hopes to deepend my knowledge about engineering. I am interested in learning the 
-    Japanese language and will be taking the JLPT examinations.</p>
+        <!-- Put a small paragraph about yourself -->
+        <p>A Web Developer based in Lahore, Pakistan.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -57,32 +60,32 @@
 
           <!-- Each div with the work__box class is a project. -->
 
-    <!-- ***** About ***** -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Portfolio Template</h3>
+              <p>
+                A free Open Source Portfolio for anyone to use for free.
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>JavaScript</li>
+                <li>Parcel</li>
+              </ul>
 
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+              <div class="work__links">
+                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+            </div>
           </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
           <div class="work__box">
             <div class="work__text">
@@ -160,6 +163,33 @@
       </div>
     </section>
 
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
+              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
+              in vel, ex quam quidem quos mollitia labore aut sunt eius
+              ratione molestiae fuga veniam facere similique voluptate.
+            </p>
+            <!-- Provide a link to your resume -->
+            <a href="#" class="btn">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- ***** Contact ***** -->
 
   <section class="contact" id="contact">
@@ -175,7 +205,7 @@
           me is via an email.
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:leefurui8@gmail.com" class="btn">Contact me</a>
+        <a href="mailto:you@example.com" class="btn">you@example.com</a>
       </div>
     </div>
   </section>
