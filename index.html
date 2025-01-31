@@ -82,26 +82,42 @@
           </div>
 
           
-    <!-- Achievements -->
-    <section class="achievements" id="achievements">
-      <div class="row">
-        <h2>Achievements & Contributions</h2>
-        <div class="achievements__boxes">
-          <div class="achievements__box">
-            <div class="achievements__text">
-              <ul class="achievements__list">
-                <li>Achievements</li>
-                <li>Volunteer Work</li>
-              </ul>
+<!-- Achievements -->
+<section class="achievements" id="achievements">
+  <div class="row">
+    <h2>Achievements & Contributions</h2>
+    <div class="achievements__boxes">
+      <div class="achievements__box">
+        <div class="achievements__text">
+          <ul class="achievements__list">
+            <li>Achievements</li>
+            <li>Volunteer Work</li>
+          </ul>
 
-   
-              <div class="achievements__links">
-                <a href="achievements.html" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-              </div>
+          <!-- Image Slider -->
+          <div class="slider">
+            <div class="slides">
+              <img src="Me.jpg" alt="Achievement 1" class="slide">
+              <img src="header.jpg" alt="Achievement 2" class="slide">
+              <img src="image3.jpg" alt="Achievement 3" class="slide">
+            </div>
+            <div class="navigation-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
             </div>
           </div>
+
+          <div class="achievements__links">
+            <a href="achievements.html" target="_blank" class="link__text">
+              Visit Site <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <!-- Endorsements -->
@@ -148,6 +164,43 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+
+
+
+      
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelector(".slides");
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlides() {
+    // Move slides
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === slideIndex);
+    });
+
+    // Increment slide index
+    slideIndex = (slideIndex + 1) % dots.length;
+  }
+
+  // Automatically change slides every 3 seconds
+  setInterval(showSlides, 3000);
+
+  // Manual navigation with dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      slideIndex = index;
+      showSlides();
+    });
+  });
+</script>
+
+
+
+      
 </body>
 
 </html>
