@@ -20,7 +20,6 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-       
           <li class="nav__item"><a href="#work" class="nav__link">Professional Journey</a></li>
           <li class="nav__item"><a href="#achievements" class="nav__link">Achievements & Contributions</a></li>
           <li class="nav__item"><a href="#endorsement" class="nav__link">Endorsements</a></li>
@@ -39,15 +38,12 @@
         <p>(Wazzup! Feel free to look around. I am still working on this project/portfolio as i am still learning the curves~~)</p>     
         <p>Hey there! I am currently serving my National Service at the Ministry of Home Affairs (MHA). 
     Afterwards, I will be pursing a degree in Mechanical Engineering at NTU in hopes to deepen my knowledge about engineering.</p>
-          </div>
+       </div>
     </div>
   </header>
 
 
   <main role="main">
-
-    
-
   </main>
 
     
@@ -93,6 +89,82 @@
       </div>
     </div>
   </div>
+
+    <div class="achievements-container">
+        <!-- Left Slider -->
+        <div class="slider-container" onclick="openModal('modal1')">
+            <div class="slider" id="slider1">
+                <img src="image1.jpg" alt="Achievement 1">
+                <img src="image2.jpg" alt="Achievement 2">
+                <img src="image3.jpg" alt="Achievement 3">
+            </div>
+        </div>
+
+        <!-- Right Slider -->
+        <div class="slider-container" onclick="openModal('modal2')">
+            <div class="slider" id="slider2">
+                <img src="image4.jpg" alt="Achievement 4">
+                <img src="image5.jpg" alt="Achievement 5">
+                <img src="image6.jpg" alt="Achievement 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Modals -->
+    <div class="modal" id="modal1" onclick="closeModal('modal1')">
+        <span class="close">&times;</span>
+        <img id="modalImg1" src="">
+    </div>
+
+    <div class="modal" id="modal2" onclick="closeModal('modal2')">
+        <span class="close">&times;</span>
+        <img id="modalImg2" src="">
+    </div>
+
+    <script>
+        let index1 = 0;
+        let index2 = 0;
+
+        function slideImages(sliderId, index) {
+            const slider = document.getElementById(sliderId);
+            const images = slider.children;
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            slider.style.transform = `translateX(${-index * 100}%)`;
+            return index;
+        }
+
+        function startSliders() {
+            setInterval(() => {
+                index1 = slideImages('slider1', index1);
+            }, 2000);
+
+            setInterval(() => {
+                index2 = slideImages('slider2', index2);
+            }, 2000);
+        }
+
+        window.onload = startSliders;
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+            const modalImg = document.getElementById(modalId).querySelector('img');
+            const activeSlider = modalId === 'modal1' ? 'slider1' : 'slider2';
+            const slider = document.getElementById(activeSlider);
+            modalImg.src = slider.children[index1].src;
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
+
+
+
+  
 </section>
 
 
@@ -141,38 +213,6 @@
   </a>
   <script src="./index.js"></script>
 
-
-
-      
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelector(".slides");
-  const dots = document.querySelectorAll(".dot");
-
-  function showSlides() {
-    // Move slides
-    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-
-    // Update dots
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === slideIndex);
-    });
-
-    // Increment slide index
-    slideIndex = (slideIndex + 1) % dots.length;
-  }
-
-  // Automatically change slides every 3 seconds
-  setInterval(showSlides, 3000);
-
-  // Manual navigation with dots
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      slideIndex = index;
-      showSlides();
-    });
-  });
-</script>
 
 
 
