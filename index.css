@@ -687,31 +687,31 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Image on the right, text on the left */
     align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .about__content {
         flex-direction: column-reverse;
-        align-items: initial;
+        align-items: center;
     }
 }
 
 .about__photo-container {
-    margin-bottom: var(--gutter-normal);
+    flex: 0 0 30%; /* Restricts the image container width to 30% */
     text-align: right;
+    max-width: 30vw; /* Ensures the container does not stretch beyond 30% of the viewport */
+    display: flex;
+    justify-content: flex-end; /* Aligns the image to the right */
 }
 
-@media(min-width: 901px) {
-    .about__text {
-        flex: 0 0 35%;
-    }
-    
-    .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
-    }
+.about__photo-container img {
+    max-width: 100%; /* Ensures the image doesn't exceed the container */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* Ensures the image maintains proportions */
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
     
