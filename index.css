@@ -765,17 +765,17 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Maximizes space between elements */
     align-items: center;
-    max-width: 900px; /* Adjust width as needed */
+    max-width: 1000px; /* Increase width if needed */
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 0;
 }
 
 
 .footer__separator {
     width: 2px;
-    height: 50px;
+    height: 100px; /* Increase height to make line longer */
     background-color: #fff; /* Adjust line color */
 }
 
