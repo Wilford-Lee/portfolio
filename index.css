@@ -757,8 +757,44 @@ body:not(.user-is-tabbing) a:focus {
     transform: translateY(3px);
 }
 
+
+
+
+
+
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+.footer__separator {
+    width: 2px;
+    height: 50px;
+    background-color: #fff; /* Adjust line color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+
+
