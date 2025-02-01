@@ -648,7 +648,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .endorsement__list {
-    /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
@@ -746,23 +745,6 @@ body:not(.user-is-tabbing) a:focus {
     height: 4rem;
 }
 
-.footer__github-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.footer__github-buttons iframe {
-    height: 2.5rem;
-    width: 84px;
-    transform: translateY(3px);
-}
-
-
-
-
-
-
-
 .footer__container {
     display: flex;
     justify-content: space-between; /* Maximizes space between elements */
@@ -778,14 +760,6 @@ body:not(.user-is-tabbing) a:focus {
     height: 100px; /* Increase height to make line longer */
     background-color: #fff; /* Adjust line color */
 }
-
-
-
-
-
-
-
-
 
 
 
