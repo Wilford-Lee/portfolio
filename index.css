@@ -700,23 +700,18 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
+    text-align: right; /* Ensures that the image is aligned to the right */
 }
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
+        flex: 0 0 35%; /* Restrict the text container to 35% width */
     }
     
     .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
-        text-align: right;
+        flex: 0 0 30%; /* Restrict the image container to 30% width */
+        margin: 0 var(--gutter-huge) 0 0; /* Adds margin to the right */
     }
-
-.about__photo-container {
-    flex: 0 0 30%; /* Restricts the image container width to 30% */
-    text-align: right;
-    max-width: 100%; /* Prevents the image container from stretching */
 }
 
 .about__photo-container img {
