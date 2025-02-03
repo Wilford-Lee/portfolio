@@ -399,42 +399,6 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
-/* --------------------------------------- */
-/* ----- Header ----- */
-/* --------------------------------------- */
-
-.header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-size: var(--font-size-normal);
-}
-
-.header__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header__text p {
-    margin: 1.5rem 0 3.5rem;
-    max-width: var(--container-medium-width);
-    font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-medium);
-}
-
-@media(max-width: 500px) {
-    .header {
-        text-align: center;
-    }
-
-    .header__text p {
-        transform: scale(.8);
-    }
-}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -520,17 +484,31 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
-.header__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* Ensure header content is a flexbox */
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Text on left, image on right */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.header__text p {
-    margin: 1.5rem 0 3.5rem;
-    max-width: var(--container-medium-width);
-    font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-medium);
+/* Text box styling */
+.header__text-box {
+    flex: 1; /* Allows text box to take space */
+}
+
+/* Image container styling */
+.about__photo-container {
+    flex: 0 0 30%; /* Restricts image container width */
+    text-align: right; /* Aligns image to the right */
+}
+
+.about__photo-container img {
+    max-width: 100%; /* Ensures the image doesn't exceed the container */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
 @media(max-width: 500px) {
