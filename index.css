@@ -759,12 +759,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 
-.footer__separator {
-    width: 2px;
-    height: 200px; /* Increase height to make line longer */
-    background-color: #D3D3D3; /* Adjust line color */
+.footer__contact-links {
+    display: flex;
+    align-items: center; /* Align button and icon */
+    gap: 1rem; /* Adds spacing between the button and icon */
 }
-
 
 
 
