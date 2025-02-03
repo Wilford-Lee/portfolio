@@ -753,7 +753,7 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     justify-content: space-between; /* Maximizes space between elements */
     align-items: center;
-    max-width: 200px; /* Increase width if needed */
+    max-width: 500px; /* Increase width if needed */
     margin: 0 auto;
     padding: 2rem 0;
 }
