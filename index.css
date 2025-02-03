@@ -747,6 +747,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 6rem;
+    vertical-align: middle; /* Ensures icon aligns with text */
 }
 
 .footer__container {
