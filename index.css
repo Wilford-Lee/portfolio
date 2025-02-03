@@ -746,7 +746,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .footer__social-image {
-    height: 4rem;
+    height: 6rem;
 }
 
 .footer__container {
