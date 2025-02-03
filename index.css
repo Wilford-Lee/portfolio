@@ -762,7 +762,7 @@ body:not(.user-is-tabbing) a:focus {
 .footer__contact-links {
     display: flex;
     align-items: center; /* Align button and icon */
-    gap: 1rem; /* Adds spacing between the button and icon */
+    gap: 3rem; /* Adds spacing between the button and icon */
 }
 
 
