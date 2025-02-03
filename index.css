@@ -762,7 +762,7 @@ body:not(.user-is-tabbing) a:focus {
 .footer__separator {
     width: 2px;
     height: 200px; /* Increase height to make line longer */
-    background-color: #fff; /* Adjust line color */
+    background-color: --border-light; /* Adjust line color */
 }
 
 
