@@ -727,40 +727,36 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .footer {
-    text-align: center;
+    text-align: center; /* Center text inside the footer */
     padding: var(--gutter-medium) 0 var(--gutter-normal);
-}
-
-.footer__social-links {
     display: flex;
-    justify-content: center;
-    padding: var(--gutter-normal) 0;
-    list-style: none;
-}
-
-.footer__social-link-item:not(:last-of-type) {
-    margin-right: var(--gutter-small);
-}
-
-.footer__social-image {
-    height: 6rem;
-    vertical-align: middle; /* Ensures icon aligns with text */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
 }
 
 .footer__container {
     display: flex;
-    justify-content: space-between; /* Maximizes space between elements */
-    align-items: center;
-    max-width: 500px; /* Increase width if needed */
-    margin: 0 auto;
-    padding: 2rem 0;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Align elements in the center */
+    text-align: center;
 }
 
-
-.footer__contact-links {
+.footer__contact {
     display: flex;
-    align-items: center; /* Align button and icon */
-    gap: 3rem; /* Adds spacing between the button and icon */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Adds spacing between elements */
+}
+
+.footer__contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social-image {
+    height: 4rem; /* Adjust size */
+    vertical-align: middle;
 }
 
 
