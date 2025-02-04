@@ -509,6 +509,8 @@ body:not(.user-is-tabbing) a:focus {
     max-width: 100%; /* Ensures the image doesn't exceed the container */
     height: auto; /* Keeps aspect ratio */
     border-radius: 10px; /* Optional: Adds rounded corners */
+    display: block;
+    visibility: visible;
 }
 
 @media(max-width: 500px) {
